@@ -43,7 +43,7 @@ namespace Sample1.Repositories
             return await dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<Region> UpdateRegionAsync(int id, Region region)
+        public async Task<Region?> UpdateRegionAsync(int id, Region region)
         {
             var regions = await dbContext.Regions.FirstOrDefaultAsync(X => X.Id == id);
             if (regions == null)
